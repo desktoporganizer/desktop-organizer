@@ -3,7 +3,6 @@ const electron = require('electron')
 const isDev = require('electron-is-dev');
 
 const app = electron.app
-console.log(app.getPath('exe'),'aaaaaaa')
 var AutoLaunch = require('auto-launch');
 if(!isDev){
   var minecraftAutoLauncher = new AutoLaunch({
@@ -47,13 +46,10 @@ const watcher = require('../src/helpers/watcher')
 ipcMain.on('watch',(event,arg)=>{
   winston.info('watch from ui');
   if(watcher.hasAppsDB()){
-    winston.info('apps hast');
-  
   setInterval(watcher.watch,3000)
 }
 })
 ipcMain.on('init',(event,arg)=>{
-  console.log(arg)
   watcher.init(arg)
 })
 async function createWindow () {
@@ -64,7 +60,6 @@ async function createWindow () {
 
   if(hasApps.success == true){
     setInterval(watcher.watch,3000)
-    winston.info('apps hast');
   }
 
   mainWindow = new BrowserWindow({show:false,width: 800, height: 600})

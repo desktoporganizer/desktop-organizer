@@ -46,7 +46,9 @@
       "target": "nsis",
       "icon":"public/icon.ico"
     },
-
+    "publish": {
+      "provider": "github"
+    },
     "directories": {
       "buildResources": "assets"
     }
