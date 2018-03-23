@@ -1,7 +1,7 @@
 {
   "name": "desktop-organizer",
   "description": "keep your desktop only with most used applications",
-  "version": "v0.1.0",
+  "version": "0.1.0",
   "private": true,
   "author": {
     "name": "moein rahimi",
