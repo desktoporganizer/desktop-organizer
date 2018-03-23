@@ -1,0 +1,54 @@
+{
+  "name": "desktop-organizer",
+  "description": "keep your desktop only with most used applications",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "moein rahimi",
+    "email": "imoeinrahimi1@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/moeinrahimi/test"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "electron-is-dev": "^0.3.0",
+    "electron-json-storage": "^4.0.2",
+    "electron-sudo": "^4.0.12",
+    "foreman": "^2.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1",
+    "windows-shortcuts": "^0.1.6",
+    "winston": "^2.4.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "electron": "*",
+    "electron-builder": "^20.5.1",
+    "wait-on": "^2.1.0"
+  },
+  "homepage": "./",
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "build x64.main=build/electron.js"
+  },
+  "build": {
+    "appId": "com.desktop-organizer.moeinrahimi",
+    "extends": null,
+    "win": {
+      "target": "nsis",
+      "icon":"public/icon.ico"
+    },
+
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.container {
+	background: rgba(0,0,0,0.9);
+	height: 100vh;
+	display : flex ;
+	align-items: center;
+	justify-content: center;
+}
+.dropZone {
+	border: 4px dashed #fff;
+	width: 500px;
+	height: 200px;
+	text-align: center;
+	display : flex ;
+	align-items: center;
+	justify-content: center;
+
+}
+.dropZone h1{
+	color :#fff;
+	margin: 10px;
+
+}
+/* #hide {
+	display: none
+} */
