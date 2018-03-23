@@ -8,7 +8,7 @@
     "email": "imoeinrahimi1@gmail.com"
   },
   "repository": {
-    "url": "https://github.com/moeinrahimi/test"
+    "url": "https://github.com/desktoporganizer/desktop-organizer"
   },
   "dependencies": {
     "auto-launch": "^5.0.5",
@@ -37,7 +37,8 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-pack": "build x64.main=build/electron.js"
+    "electron-pack": "build x64.main=build/electron.js",
+    "ship": "build --config=electron-builder.yml -p always"
   },
   "build": {
     "appId": "com.desktop-organizer.moeinrahimi",
